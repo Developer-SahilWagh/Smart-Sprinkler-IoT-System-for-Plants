@@ -55,6 +55,7 @@ Description: 7.4V 3000mAh rechargeable pack powers the system for 2.5 hours (act
 ## Software Architecture
 #### A. Robot Firmware (ESP32):
 
+
 •	Web Server: AsyncHTTP server for receiving commands.
 
 •	APIs:
@@ -65,6 +66,7 @@ Description: 7.4V 3000mAh rechargeable pack powers the system for 2.5 hours (act
 
  POST /pump: Pump control (ON/OFF).
  
+
 
 #### B. Computer Vision (Python):
 •	Libraries: OpenCV, Ultralytics (YOLOv8), Requests.
@@ -83,6 +85,7 @@ Description: 7.4V 3000mAh rechargeable pack powers the system for 2.5 hours (act
   	
 4.	If no plant: Continue navigation.
 
+
 ## System Workflows
 #### A. Autonomous Navigation:
 1.	Step 1: Robot moves forward (DC motors).
@@ -98,8 +101,11 @@ Description: 7.4V 3000mAh rechargeable pack powers the system for 2.5 hours (act
 
 #### C. Fault Handling:
 •	No Plant Detected: Robot rotates (15° increments) to search.
+
 •	Low Battery: ESP32 enters deep sleep (solar recharge if available).
+
 •	Sensor Failure: HTTP alert sent to monitoring system.
+
 
 ## Project Prototype
 
